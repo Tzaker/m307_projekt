@@ -3,5 +3,5 @@
 $router = new Router();
 
 $router->define([
-    '' => 'app/Controllers/WelcomeController.php'
+    'add' => 'app/Controllers/AddController.php'
 ]);
