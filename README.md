@@ -1,1 +1,3 @@
-# m307_projekt
+#Projekt M307
+
+##Anselm Schacher, Simon Kaspar
