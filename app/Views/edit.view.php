@@ -4,7 +4,38 @@
         <div class="col-6">
             <h3>Ausleihe bearbeiten</h3>
             <form>
-            <?php include 'app/Views/form.view.php'; ?>
+            <div class="row">
+                <div class="col-6">
+                    <p>Name</p>
+                </div>
+                <div class="col-6">
+                    <p>Vorname</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="mb-3" type="text" id="name" name="name" value="<?= "name" ?>"></input>
+                </div>
+                <div class="col-6">
+                    <input class="mb-3" type="text" id="vorname" name="vorname"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>Email</p>
+                </div>
+                <div class="col-6">
+                    <p>Telefon</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="mb-3" type="email" id="email" name="email"/>
+                </div>
+                <div class="col-6">
+                    <input class="mb-3" type="text" id="telefon" name="telefon"/>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-6">
                     <p>Zurückgebracht</p>
