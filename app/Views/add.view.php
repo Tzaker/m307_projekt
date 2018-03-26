@@ -9,7 +9,9 @@
                 <div class="col-6">
                 <select>
                     <option>Auswählen...</option>
-                    <?php showMembershipStatus(); ?>
+                    <?php foreach ($memberships as $membership) { ?>
+                    <option value="<?= $membership["MembershipID"] ?>"><?= $membership["m_name"] ?></option>
+                    <?php } ?>
                 </select>
                 </div>
                 <div class="col-6">
