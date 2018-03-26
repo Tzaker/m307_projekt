@@ -14,10 +14,9 @@ $firstname = post('firstname') ?? '';
 $surname = post('surname') ?? ''; 
 $email = post('email') ?? '';
 $phone = post('phone') ?? ''; 
-$membership = post('membership') ?? ''; 
+$membershipkey = post('membershipkey') ?? ''; 
 $title = post('title') ?? '';
 $savetype = post('savetype') ?? '';
-
 
 require 'app/Views/add.view.php';
 

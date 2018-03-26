@@ -46,16 +46,14 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                <select name="membership">
-                    <option>Auswählen...</option>
+                <select name="membershipkey">
                     <?php foreach ($memberships as $membership) { ?>
-                    <option id="membership" value="<?= $membership["MembershipID"] ?>"><?= $membership["m_name"] ?></option>
+                    <option id="membershipkey" value="<?= $membership["MembershipID"] ?>"><?= $membership["m_name"] ?></option>
                     <?php } ?>
                 </select>
                 </div>
                 <div class="col-6">
                 <select name="title">
-                    <option>Auswählen...</option>
                     <?php foreach ($movies as $movie) { ?>
                     <option id="title"  value="<?= $movie["id"] ?>"><?= $movie["title"] ?></option>
                     <?php } ?>

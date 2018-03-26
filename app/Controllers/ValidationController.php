@@ -36,11 +36,11 @@ if($phone){
     $ren->phone = $phone;
 }
 
-if($membership){
-    if($membership < 0 || $membership > 4) {
-        //$isValid = false;
+if($membershipkey){
+    if($membershipkey < 0 or $membershipkey > 4) {
+        $isValid = false;
     }
-    $mem->id = $membership;
+    $mem->id = $membershipkey;
 }
 
 if($title){
@@ -50,12 +50,13 @@ if($title){
     $mov->id = $title;
 }
 
-echo "\nis Valid: " .$isValid;
-
 if($isValid == 1){
+    echo "<h3>Gültige Eingabe. Wird verarbeitet.</h3>";
     if($savetype == "add"){
         $ren->saveNewRental($mov, $mem);
     } else {
         $ren->saveEditedRental($mov, $mem);
     }
+} else {
+    echo "ungültige Eingabe ";
 }

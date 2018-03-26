@@ -38,7 +38,14 @@ class Rental {
     }
     
     public function saveNewRental($movie, $membership){
-        $statement = $this->db->prepare('INSERT INTO rentals VALUES');
+        $statement = $this->db->prepare('INSERT INTO rentals (name, surname, email, phone, fk_ID, fk_MembershipID, status, time_rented) VALUES (:firstname, :surname, :email, :phone, :id, :memid, 0, CURDATE())');
+        $statement->bindParam(':firstname', $this->firstname);
+        $statement->bindParam(':surname', $this->surname);
+        $statement->bindParam(':email', $this->email);
+        $statement->bindParam(':phone', $this->phone);
+        $statement->bindParam(':id', $movie->id);
+        $statement->bindParam(':memid', $membership->id);
+        $statement->execute();
     }
 
     public function saveEditedRental($movie, $membership){

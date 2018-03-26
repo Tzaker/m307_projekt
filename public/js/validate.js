@@ -26,7 +26,7 @@ $(function() {
         fields.forEach(function(field) {
 
             var $field = $('#' + field.id);
-            console.log($field);
+            console.log($field.val());
             //Check if input is empty
             if($field.val() === '' || $field.val() == 'Auswählen') {
                
