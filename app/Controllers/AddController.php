@@ -1,12 +1,12 @@
 <?php
+require 'app/Models/Movie.php';
+$mov = new Movie();
 
 function showMembershipStatus(){
 
 }
 
-function showMovieList(){
-    
-}
+$movies = $mov->getAllMovies();
 
 
 require 'app/Views/add.view.php';

@@ -1,6 +1,6 @@
 <?php
 
-class Movies {
+class Movie {
 
     public $id;
     public $title;
@@ -12,4 +12,11 @@ class Movies {
 
         $this->db = connectToDatabase();
     }
+
+    public function getAllMovies(){
+        $statement = $this->db->prepare('SELECT * FROM movies');
+        $statement->execute();
+        return $statement->fetchAll();
+    }
+
 }
