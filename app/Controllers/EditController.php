@@ -7,3 +7,7 @@ $rental = new Rental();
 
 $movies = $mov->getAllMovies();
 require 'app/Views/edit.view.php';
+
+if(post('firstname')){
+    require 'app/Controllers/ValidationController.php';
+}

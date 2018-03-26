@@ -36,7 +36,7 @@ if($phone){
     $ren->phone = $phone;
 }
 
-if($membershipkey){
+if($membershipkey && $savetype != "add"){
     if($membershipkey < 0 or $membershipkey > 4) {
         $isValid = false;
     }
