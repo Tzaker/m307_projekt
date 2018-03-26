@@ -21,8 +21,8 @@
                     <td><?= $rental["surname"] ?></td>
                     <td><?= $rental["title"] ?></td>
                     <td><?= $rental["time_return"] ?></td>
-                    <td><a href="edit?id=<?= $rental["RentalID"]?>">Bearbeiten</a></td>
                     <td><?= $rental["smile"] ?></td>
+                    <td><a href="edit?id=<?= $rental["RentalID"]?>">Bearbeiten</a></td>
                     <tr/>
                 <?php } ?>
                 </tbody>

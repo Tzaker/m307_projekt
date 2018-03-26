@@ -5,13 +5,15 @@ $rental = new Rental();
 $rentals = $rental->getOpenRentals();
 
 foreach ($rentals as &$row) {
-    $datereturn = strtotime($row['time_return']);
-    $datenow = strtotime(date('Y-m-d'));
+    $datereturn = new DateTime($row['time_return']);
+    $datenow = new DateTime(date('Y-m-d'));
 
     if ($datereturn >= $datenow)
         $row['smile'] = "😁";
     else 
         $row['smile'] = "😠";
+    
+    $row['time_return'] = $datereturn->format('d.m.Y');
 
 }
 
