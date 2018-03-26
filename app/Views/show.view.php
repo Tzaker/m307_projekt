@@ -6,19 +6,19 @@
             <table class="table">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Surname</th>
                     <th scope="col">Movie</th>
+                    <th scope="col">Date to return</th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($rentals as $rental) { ?>
                     <tr>
-                    <th scope="row"><?= $rental["RentalID"] ?></th>
-                    <td><?= $rental["name"] ?></td>
+                    <th scope="row"><?= $rental["name"] ?></th>
+                    <td><?= $rental["surname"] ?></td>
                     <td><?= $rental["title"] ?></td>
-                    <td><?= $rental["days"] ?></td>
+                    <td><?= $rental["time_return"] ?></td>
                 <?php } ?>
                 </tbody>
             </table>

@@ -2,5 +2,5 @@
 require 'app/Models/Rental.php';
 $rental = new Rental();
 
-$rentals = $rental->getAllRentals();
+$rentals = $rental->getOpenRentals();
 require 'app/Views/show.view.php';
