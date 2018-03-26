@@ -45,7 +45,7 @@ INSERT INTO `membership` (`MembershipID`, `m_name`, `days`) VALUES
 (1, 'Keine', 30),
 (2, 'Bronze', 40),
 (3, 'Silber', 50),
-(4, 'Gold', 50);
+(4, 'Gold', 70);
 
 -- --------------------------------------------------------
 
