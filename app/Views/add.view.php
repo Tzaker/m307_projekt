@@ -53,7 +53,9 @@
                 <div class="col-6">
                 <select>
                     <option>Auswählen...</option>
-                    <?php showMovieList(); ?>
+                    <?php foreach ($movies as $movie) { ?>
+                    <option value="<?= $movie["id"] ?>"><?= $movie["title"] ?></option>
+                    <?php } ?>
                 </select>
                 </div>
             </div>
