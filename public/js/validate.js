@@ -9,10 +9,10 @@ $(function() {
         // verwendet werden. Dieses kann dann in einer forEach
         // Schleife verarbeitet werden.
         var fields = [
-            {id: 'name', message: 'Bitte gib einen Nachnamen ein.'},
-            {id: 'vorname', message: 'Bitte gib einen Vornamen ein.'},
+            {id: 'surname', message: 'Bitte gib einen Nachnamen ein.'},
+            {id: 'firstname', message: 'Bitte gib einen Vornamen ein.'},
             {id: 'email', message: 'Bitte gib eine gültige Email-Adresse ein.'},
-            {id: 'telefon', message: 'Bitte gib eine gültige Telefonnummer ein.'},
+            {id: 'phone', message: 'Bitte gib eine gültige Telefonnummer ein.'},
             {id: 'membership', message: 'Bitte wähle eine Mitgliedschaft aus.'},
             {id: 'title', message: 'Bitte wähle einen Film aus.'}
         ];
@@ -28,9 +28,8 @@ $(function() {
             var $field = $('#' + field.id);
             console.log($field);
             //Check if input is empty
-            if($field.val() === '') {
-
-                if(field != "telefon" ) {
+            if($field.val() === '' || $field.val() == 'Auswählen') {
+               
                     isValid = false;
 
                     // Eine Fehlermeldung generieren
@@ -48,7 +47,7 @@ $(function() {
                     var $label = $('#' + field.id + 'label');
                     console.log($label);
                     $label.append( ' ' + errorMessage); // Fehlermeldung hinzufügen
-                }
+                
             }
 
         });

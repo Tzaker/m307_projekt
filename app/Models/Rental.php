@@ -5,7 +5,7 @@ class Rental {
     public $id;
     public $time;
     public $status;
-    public $name;
+    public $firstname;
     public $surname;
     public $email;
     public $phone;
@@ -36,4 +36,13 @@ class Rental {
             return $statement->fetchAll();
         }
     }
+    
+    public function saveNewRental($movie, $membership){
+        $statement = $this->db->prepare('INSERT INTO rentals VALUES');
+    }
+
+    public function saveEditedRental($movie, $membership){
+        $statement = $this->db->prepare('UPDATE rentals SET WHERE');
+    }
+    
 }

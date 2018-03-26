@@ -6,26 +6,26 @@
             <form id="add-form" method="POST">
             <div class="row">
                 <div class="col-6">
-                    <label id="namelabel">Name</label>
+                    <label id="surnamelabel">Name</label>
                 </div>
                 <div class="col-6">
-                    <label id="vornamelabel">Vorname</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <input class="mb-3" type="text" id="name" name="name"/>
-                </div>
-                <div class="col-6">
-                    <input class="mb-3" type="text" id="vorname" name="vorname"/>
+                    <label id="firstnamelabel">Vorname</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                <label id="emaillabel">Email</label>
+                    <input class="mb-3" type="text" id="surname" name="surname"/>
                 </div>
                 <div class="col-6">
-                <label id="telefonlabel">Telefon</label>
+                    <input class="mb-3" type="text" id="firstname" name="firstname"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label id="emaillabel">Email</label>
+                </div>
+                <div class="col-6">
+                    <label id="phonelabel">Telefon</label>
                 </div>
             </div>
             <div class="row">
@@ -33,7 +33,7 @@
                     <input class="mb-3" type="email" id="email" name="email"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="telefon" name="telefon"/>
+                    <input class="mb-3" type="text" id="phone" name="phone"/>
                 </div>
             </div>
             <div class="row">
@@ -63,6 +63,7 @@
                 </div>
             </div>
             <br>
+            <input type="hidden" value="add" name="savetype"/>
             <input class="btn" type="submit" value="Speichern">
             </form>
         </div>

@@ -6,26 +6,26 @@
             <form>
             <div class="row">
                 <div class="col-6">
-                    <p>Name</p>
+                    <label id="surnamelabel">Name</label>
                 </div>
                 <div class="col-6">
-                    <p>Vorname</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <input class="mb-3" type="text" id="name" name="name" value="<?= "name" ?>"></input>
-                </div>
-                <div class="col-6">
-                    <input class="mb-3" type="text" id="vorname" name="vorname"/>
+                    <label id="firstnamelabel">Vorname</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <p>Email</p>
+                    <input class="mb-3" type="text" id="surname" name="surname" value="<?= "surname" ?>"></input>
                 </div>
                 <div class="col-6">
-                    <p>Telefon</p>
+                    <input class="mb-3" type="text" id="firstname" name="firstname"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label id="emaillabel">Email</label>
+                </div>
+                <div class="col-6">
+                    <label id="phonelabel">Telefon</label>
                 </div>
             </div>
             <div class="row">
@@ -33,7 +33,7 @@
                     <input class="mb-3" type="email" id="email" name="email"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="telefon" name="telefon"/>
+                    <input class="mb-3" type="text" id="phone" name="phone"/>
                 </div>
             </div>
             <div class="row">
