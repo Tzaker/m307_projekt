@@ -3,13 +3,13 @@
         <div class="col-3"></div>
         <div class="col-6">
             <h3>Ausleihe erfassen</h3>
-            <form>
+            <form id="add-form" method="POST">
             <div class="row">
                 <div class="col-6">
-                    <p>Name</p>
+                    <label id="namelabel">Name</label>
                 </div>
                 <div class="col-6">
-                    <p>Vorname</p>
+                    <label id="vornamelabel">Vorname</label>
                 </div>
             </div>
             <div class="row">
@@ -22,10 +22,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <p>Email</p>
+                <label id="emaillabel">Email</label>
                 </div>
                 <div class="col-6">
-                    <p>Telefon</p>
+                <label id="telefonlabel">Telefon</label>
                 </div>
             </div>
             <div class="row">
@@ -38,26 +38,26 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <p>Mitgliedschaft</p>
+                <label id="membershiplabel">Mitgliedschaft</label>
                 </div>
                 <div class="col-6">
-                    <p>Ausgewähltes Video</p>
+                    <label id="titlelabel">Ausgewähltes Video</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                <select>
+                <select name="membership">
                     <option>Auswählen...</option>
                     <?php foreach ($memberships as $membership) { ?>
-                    <option value="<?= $membership["MembershipID"] ?>"><?= $membership["m_name"] ?></option>
+                    <option id="membership" value="<?= $membership["MembershipID"] ?>"><?= $membership["m_name"] ?></option>
                     <?php } ?>
                 </select>
                 </div>
                 <div class="col-6">
-                <select>
+                <select name="title">
                     <option>Auswählen...</option>
                     <?php foreach ($movies as $movie) { ?>
-                    <option value="<?= $movie["id"] ?>"><?= $movie["title"] ?></option>
+                    <option id="title"  value="<?= $movie["id"] ?>"><?= $movie["title"] ?></option>
                     <?php } ?>
                 </select>
                 </div>
