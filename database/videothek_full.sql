@@ -21,7 +21,10 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `m307`
 --
-CREATE DATABASE IF NOT EXISTS `m307` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+
+DROP DATABASE IF EXISTS `m307`;
+
+CREATE DATABASE `m307` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `m307`;
 
 -- --------------------------------------------------------
@@ -183,6 +186,17 @@ CREATE TABLE `rentals` (
   `email` varchar(50) NOT NULL,
   `phone` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Daten für Tabelle `rentals`
+--
+
+INSERT INTO `rentals` (`RentalID`, `fk_ID`, `fk_MembershipID`, `time_rented`, `status`, `name`, `surname`, `email`, `phone`) VALUES
+(1, 56, 2, '2018-03-13', 0, 'George', 'Harrison', 'geha@internet.com', '+41798575223'),
+(2, 85, 4, '2018-02-20', 0, 'Johnny', 'B. Goode', 'johnny@terz.com', '0784562114'),
+(3, 12, 1, '2018-01-09', 0, 'Bert', 'Brecht', 'berti@brecht.de', '0855497889'),
+(4, 39, 3, '2018-03-04', 1, 'Lara', 'Croft', 'lcroft@sweep.com', '0048621455654');
+
 
 --
 -- Indizes der exportierten Tabellen
