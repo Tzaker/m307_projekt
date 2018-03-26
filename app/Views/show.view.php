@@ -11,6 +11,7 @@
                     <th scope="col">Film</th>
                     <th scope="col">Rückgabedatum</th>
                     <th scope="col"></th>
+                    <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,6 +22,8 @@
                     <td><?= $rental["title"] ?></td>
                     <td><?= $rental["time_return"] ?></td>
                     <td><a href="edit?id=<?= $rental["RentalID"]?>">Bearbeiten</a></td>
+                    <td></td>
+                    <tr/>
                 <?php } ?>
                 </tbody>
             </table>
