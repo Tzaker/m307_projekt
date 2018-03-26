@@ -30,7 +30,7 @@ if($phone){
         $isValid = false;
     }
 
-    if(preg_match('[^\+\/\(\)\-\d\s]', $phone)){
+    if(preg_match('/[^\+\/\(\)\-\d\s]/', $phone)){
         $isValid = false;
     }
     $ren->phone = $phone;

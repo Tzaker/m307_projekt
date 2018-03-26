@@ -14,10 +14,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="surname" name="surname" value="<?= "surname" ?>"></input>
+                    <input class="mb-3" type="text" id="surname" name="surname" value="<?= $currentrental['surname']; ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="firstname" name="firstname"/>
+                    <input class="mb-3" type="text" id="firstname" name="firstname" value="<?= $currentrental['name']; ?>"/>
                 </div>
             </div>
             <div class="row">
@@ -30,10 +30,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="email" id="email" name="email"/>
+                    <input class="mb-3" type="email" id="email" name="email" value="<?= $currentrental['email']; ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="phone" name="phone"/>
+                    <input class="mb-3" type="text" id="phone" name="phone" value="<?= $currentrental['phone']; ?>"/>
                 </div>
             </div>
             <div class="row">
@@ -46,14 +46,16 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                <input type="checkbox">
+                <input type="checkbox" value="<?= $currentrental['status']; ?>">
                 </div>
                 <div class="col-6">
                 <select>
-                    <option>Auswählen...</option>
                     <?php foreach ($movies as $movie) { ?>
-                    <option value="<?= $movie["id"] ?>"><?= $movie["title"] ?></option>
-                    <?php } ?>
+                        <option value="<?php echo $movie["id"];?>"
+                        <?php if($movie["id"] == $currentrental['fk_ID']) {
+                            echo "selected"; } ?> > <?php echo $movie["title"]; ?> </option>
+                     <?php   
+                    } ?>
                 </select>
                 </div>
             </div>
