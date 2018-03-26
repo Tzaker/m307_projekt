@@ -23,7 +23,7 @@ class Rental {
     }
 
     public function getOpenRentals(){
-        $statement = $this->db->prepare('SELECT RentalID, name, surname, time_rented, title, time_rented + INTERVAL days DAY AS time_return FROM rentals LEFT JOIN movies ON rentals.fk_ID = movies.ID LEFT JOIN membership ON rentals.fk_MembershipID = membership.MembershipID WHERE status = 0 ORDER BY time_rented ASC');
+        $statement = $this->db->prepare('SELECT RentalID, name, surname, time_rented, title, status, time_rented + INTERVAL days DAY AS time_return FROM rentals LEFT JOIN movies ON rentals.fk_ID = movies.ID LEFT JOIN membership ON rentals.fk_MembershipID = membership.MembershipID WHERE status = 0 ORDER BY time_rented ASC');
         $statement->execute();
         return $statement->fetchAll();
     }

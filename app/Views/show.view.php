@@ -22,7 +22,7 @@
                     <td><?= $rental["title"] ?></td>
                     <td><?= $rental["time_return"] ?></td>
                     <td><a href="edit?id=<?= $rental["RentalID"]?>">Bearbeiten</a></td>
-                    <td></td>
+                    <td><?= $rental["smile"] ?></td>
                     <tr/>
                 <?php } ?>
                 </tbody>
