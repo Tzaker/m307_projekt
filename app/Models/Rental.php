@@ -17,7 +17,7 @@ class Rental {
     }
 
     public function getAllRentals(){
-        $statement = $this->db->prepare('SELECT * FROM rentals');
+        $statement = $this->db->prepare('SELECT * FROM rentals LEFT JOIN movies ON rentals.fk_ID = movies.ID LEFT JOIN membership ON rentals.fk_MembershipID = membership.MembershipID');
         $statement->execute();
         return $statement->fetchAll();
     }
