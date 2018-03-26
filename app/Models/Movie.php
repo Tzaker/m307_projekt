@@ -19,4 +19,12 @@ class Movie {
         return $statement->fetchAll();
     }
 
+    public function getMovie($id){
+        if(isset($this->id)){
+            $statement = $this->db->prepare('SELECT * FROM movies WHERE id = :id');
+            $statement->bindParam(':id', $id);
+            $statement->execute();
+            return $statement->fetchAll();
+        }
+    }
 }

@@ -35,7 +35,7 @@
     </ul>
   </div>
 </nav>
-
+<br>
 <?php
 
 require 'core/bootstrap.php';
