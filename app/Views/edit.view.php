@@ -3,7 +3,7 @@
         <div class="col-3"></div>
         <div class="col-6">
             <h3>Ausleihe bearbeiten</h3>
-            <form>
+            <form method="POST">
             <div class="row">
                 <div class="col-6">
                     <label id="surnamelabel">Name</label>

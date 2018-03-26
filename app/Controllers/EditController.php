@@ -12,8 +12,8 @@ $id = $_GET['id'] ?? '';
 $currentrental = $ren->getRentalById($id);
 $currentrental = $currentrental[0];
 
-require 'app/Views/edit.view.php';
 
+require 'app/Views/edit.view.php';
 if(post('firstname')){
     require 'app/Controllers/ValidationController.php';
 }
