@@ -29,12 +29,10 @@ class Rental {
     }
 
     public function getRentalById($id){
-        if(isset($this->id)){
-            $statement = $this->db->prepare('SELECT * FROM rentals WHERE id = :id');
-            $statement->bindParam(':id', $id);
-            $statement->execute();
-            return $statement->fetchAll();
-        }
+        $statement = $this->db->prepare('SELECT * FROM rentals WHERE RentalID = :id');
+        $statement->bindParam(':id', $id);
+        $statement->execute();
+        return $statement->fetchAll();
     }
     
     public function saveNewRental($movie, $membership){
