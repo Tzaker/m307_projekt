@@ -1,3 +1,5 @@
+<script>var memberships = <?php echo json_encode($memberships) ?>;</script>
+<script src="public/js/requestMemberships.js"></script>
 <div class="container">
     <div class="row">
         <div class="col-2"></div>
@@ -62,11 +64,21 @@
                 </select>
                 </div>
                 <div class="col-6">
-                <select class="selectvideo" name="movieid">
+                <select class="selectvideo mb-3" name="movieid">
                     <?php foreach ($movies as $movie) { ?>
                     <option id="movieid" value="<?= $movie["id"] ?>"><?= $movie["title"] ?></option>
                     <?php } ?>
                 </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label id="dayslabel">Maximale Ausleihedauer</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" id="returndate" disabled />
                 </div>
             </div>
             <br>

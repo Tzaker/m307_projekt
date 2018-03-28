@@ -16,7 +16,7 @@ class Membership {
     }
 
     public function getAllMemberships(){
-        $statement = $this->db->prepare('SELECT MembershipID, m_name FROM membership');
+        $statement = $this->db->prepare('SELECT MembershipID, m_name, days FROM membership');
         $statement->execute();
         return $statement->fetchAll();
     }
