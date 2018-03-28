@@ -36,7 +36,7 @@ if($phone){
     $ren->phone = $phone;
 }
 
-if($membershipkey && $savetype != "add"){
+if($membershipkey && $savetype == "add"){
     if($membershipkey < 0 or $membershipkey > 4) {
         $isValid = false;
     }
@@ -57,6 +57,8 @@ if($isValid == 1){
     } else {
         $ren->saveEditedRental($mov, $mem);
     }
+
+    //header("http://localhost/projekt/m307_projekt/show");
 } else {
     echo "ungültige Eingabe ";
 }
