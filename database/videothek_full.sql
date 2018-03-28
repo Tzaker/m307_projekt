@@ -22,10 +22,10 @@ SET time_zone = "+00:00";
 -- Datenbank: `m307`
 --
 
-DROP DATABASE IF EXISTS `m307`;
+-- DROP DATABASE IF EXISTS `m307`;
 
-CREATE DATABASE `m307` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `m307`;
+-- CREATE DATABASE `m307` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `kurseictbz_30716`;
 
 -- --------------------------------------------------------
 

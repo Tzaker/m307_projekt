@@ -12,6 +12,8 @@ $id = $_GET['id'] ?? '';
 $currentrental = $ren->getRentalById($id);
 $currentrental = $currentrental[0];
 
+$timerented = formatDate($currentrental['time_rented']);
+
 if(post('firstname')){
     require 'app/Controllers/ValidationController.php';
 }

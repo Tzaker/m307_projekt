@@ -6,7 +6,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                    <th scope="col">Name</th>
+                    <th scope="col">Nachname</th>
                     <th scope="col">Vorname</th>
                     <th scope="col">Film</th>
                     <th scope="col">Rückgabedatum</th>
@@ -17,8 +17,8 @@
                 <tbody>
                 <?php foreach ($rentals as $rental) { ?>
                     <tr>
-                    <td><?= $rental["name"] ?></td>
                     <td><?= $rental["surname"] ?></td>
+                    <td><?= $rental["name"] ?></td>
                     <td><?= $rental["title"] ?></td>
                     <td><?= $rental["time_return"] ?></td>
                     <td><?= $rental["smile"] ?></td>

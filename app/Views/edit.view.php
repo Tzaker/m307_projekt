@@ -6,7 +6,7 @@
             <form method="POST">
             <div class="row">
                 <div class="col-6">
-                    <label id="surnamelabel">Name</label>
+                    <label id="surnamelabel">Nachname</label>
                 </div>
                 <div class="col-6">
                     <label id="firstnamelabel">Vorname</label>
@@ -72,7 +72,7 @@
                     <input class="mb-3" type="text" id="membershipname" name="membershipname" disabled value="<?= $currentrental['m_name']; ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="phone" name="phone" disabled value="<?= $currentrental['time_rented']; ?>"/>
+                    <input class="mb-3" type="text" id="phone" name="phone" disabled value="<?= $timerented ?>"/>
                 </div>
             </div>
             <br>

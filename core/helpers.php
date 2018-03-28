@@ -36,3 +36,9 @@ function headerToRoute(string $route) {
     $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
     header("Location: http://$host$uri/$route");
 }
+
+function formatDate($datestring){
+    $date = new DateTime($datestring);
+    $date = $date->format('d.m.Y');
+    return $date;
+}
