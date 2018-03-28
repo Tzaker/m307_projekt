@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-2"></div>
+        <div class="col-8">
             <h3>Ausleihe erfassen</h3>
             <form id="add-form" method="POST">
             <div class="row">
@@ -46,14 +46,14 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                <select name="membershipkey">
+                <select class="selectmembership" name="membershipkey">
                     <?php foreach ($memberships as $membership) { ?>
                     <option id="membershipkey" value="<?= $membership["MembershipID"] ?>"><?= $membership["m_name"] ?></option>
                     <?php } ?>
                 </select>
                 </div>
                 <div class="col-6">
-                <select name="title">
+                <select class="selectvideo" name="movieid">
                     <?php foreach ($movies as $movie) { ?>
                     <option id="title"  value="<?= $movie["id"] ?>"><?= $movie["title"] ?></option>
                     <?php } ?>
@@ -65,7 +65,7 @@
             <input class="btn" type="submit" value="Speichern">
             </form>
         </div>
-        <div class="col-3"></div>
+        <div class="col-2"></div>
 
     </div>
 </div>

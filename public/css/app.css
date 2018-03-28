@@ -6,3 +6,7 @@ body {
 .error-msg {
     color: red;
 }
+
+.selectvideo, .selectmembership {
+    width: 51%;
+}

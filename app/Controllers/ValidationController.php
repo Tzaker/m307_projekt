@@ -6,7 +6,7 @@ $surname = post('surname') ?? '';
 $email = post('email') ?? '';
 $phone = post('phone') ?? ''; 
 $membershipkey = post('membershipkey') ?? ''; 
-$title = post('title') ?? '';
+$movieid = post('movieid') ?? '';
 $savetype = post('savetype') ?? '';
 $returned = post('returned') ?? '';
 
@@ -52,11 +52,11 @@ if($membershipkey && $savetype == "add"){
     $mem->id = $membershipkey;
 }
 
-if($title){
-    if($title < 0 || $title > 100){
+if($movieid){
+    if($movieid < 0 || $movieid > 100){
         $isValid = false;
     }
-    $mov->id = $title;
+    $mov->id = $movieid;
 }
 
 if($returned == 0 || $returned == 1){

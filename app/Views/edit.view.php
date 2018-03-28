@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-2"></div>
+        <div class="col-8">
             <h3>Ausleihe bearbeiten</h3>
             <form method="POST">
             <div class="row">
@@ -49,7 +49,7 @@
                 <input type="checkbox" name="returned" value="1">
                 </div>
                 <div class="col-6">
-                <select class="mb-3">
+                <select class="selectvideo mb-3" name="movieid">
                     <?php foreach ($movies as $movie) { ?>
                         <option value="<?php echo $movie["id"];?>"
                         <?php if($movie["id"] == $currentrental['fk_ID']) {
@@ -61,7 +61,7 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <label id="membershipnamelabel">Mitgliedschaft (Tage)</label>
+                    <label id="membershipnamelabel">Mitgliedschaft</label>
                 </div>
                 <div class="col-6">
                 <label id="daterentedlabel">Ausleihdatum</label>
@@ -69,10 +69,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="membershipname" name="membershipname" disabled value="<?php echo e($currentrental['m_name']); ?>"/>
+                    <input class="mb-3" type="text" id="membershipname" disabled value="<?php echo e($currentrental['m_name']); ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="phone" name="phone" disabled value="<?= $timerented ?>"/>
+                    <input class="mb-3" type="text" id="timerented" disabled value="<?= $timerented ?>"/>
                 </div>
             </div>
             <div class="row">
@@ -85,17 +85,17 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="days" name="days" disabled value="<?php echo $currentrental['days']." Tage"; ?>"/>
+                    <input class="mb-3" type="text" id="days" disabled value="<?php echo $currentrental['days']." Tage"; ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="returndate" name="returndate" disabled value="<?= $timereturn ?>"/>
+                    <input class="mb-3" type="text" id="returndate" disabled value="<?= $timereturn ?>"/>
                 </div>
             </div>
             <br>
             <input class="btn" type="submit" value="Speichern">
             </form>
         </div>
-        <div class="col-3"></div>
+        <div class="col-2"></div>
     </div>
 </div>
 
