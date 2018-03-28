@@ -4,17 +4,13 @@ $(function() {
 
         var isValid = true;
 
-        // Bei einfachen Validierungen kann z. B. auch ein
-        // Array für die Felder und Fehlermeldungen
-        // verwendet werden. Dieses kann dann in einer forEach
-        // Schleife verarbeitet werden.
         var fields = [
             {id: 'surname', message: 'Bitte gib einen Nachnamen ein.'},
             {id: 'firstname', message: 'Bitte gib einen Vornamen ein.'},
-            {id: 'email', message: 'Bitte gib eine gültige Email-Adresse ein.'},
-            {id: 'phone', message: 'Bitte gib eine gültige Telefonnummer ein.'},
+            {id: 'email', message: 'Bitte gib eine Email-Adresse ein.'},            
             {id: 'membership', message: 'Bitte wähle eine Mitgliedschaft aus.'},
-            {id: 'title', message: 'Bitte wähle einen Film aus.'}
+            {id: 'movieid', message: 'Bitte wähle einen Film aus.'},
+
         ];
 
         // Alle vorhandenen Fehlerklassen entfernen
@@ -26,9 +22,10 @@ $(function() {
         fields.forEach(function(field) {
 
             var $field = $('#' + field.id);
-            console.log($field.val());
+            
             //Check if input is empty
-            if($field.val() === '' || $field.val() == 'Auswählen') {
+            //.trim()
+            if($field.val() === '') {
                
                     isValid = false;
 
@@ -37,17 +34,26 @@ $(function() {
                                     + field.message
                                     + '</span>';
 
-                    // Die .has-error Klasse kann in CSS z. B.
-                    // rot formatiert werden, damit die fehlerhaften
-                    // Felder direkt ersichtlich sind.
-                    $field
-                        .parent()
-                        .addClass('has-error'); // Fehlerklasse hinzufügen
-
                     var $label = $('#' + field.id + 'label');
                     console.log($label);
                     $label.append( ' ' + errorMessage); // Fehlermeldung hinzufügen
                 
+            }
+
+            //check for correct phone number input
+            var $phonevalue = $('#phone');
+            var $phone = $('#phonelabel');
+            var reg = "[^\+\/\(\)\-\d\s]";
+
+            if($phonevalue.val().match(reg)){
+                isValid = false;
+                console.log("invalid phone");
+                // Eine Fehlermeldung generieren
+                var error = '<span class="error-msg">'
+                                + "Telefonnummer ungültig"
+                                + '</span>';
+
+                $phone.append( ' ' + error);
             }
 
         });

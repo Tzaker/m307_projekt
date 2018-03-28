@@ -184,7 +184,7 @@ CREATE TABLE `rentals` (
   `name` varchar(50) NOT NULL,
   `surname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `phone` varchar(15) NOT NULL
+  `phone` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -194,8 +194,11 @@ CREATE TABLE `rentals` (
 INSERT INTO `rentals` (`RentalID`, `fk_ID`, `fk_MembershipID`, `time_rented`, `status`, `name`, `surname`, `email`, `phone`) VALUES
 (1, 56, 2, '2018-03-13', 0, 'George', 'Harrison', 'geha@internet.com', '+41798575223'),
 (2, 85, 4, '2018-02-20', 0, 'Johnny', 'B. Goode', 'johnny@terz.com', '0784562114'),
-(3, 12, 1, '2018-01-09', 0, 'Bert', 'Brecht', 'berti@brecht.de', '0855497889'),
-(4, 39, 3, '2018-03-04', 1, 'Lara', 'Croft', 'lcroft@sweep.com', '0048621455654');
+(3, 12, 1, '2018-01-09', 0, 'Bert', 'Brecht', 'berti@brecht.de', NULL),
+(4, 39, 3, '2018-03-04', 1, 'Lara', 'Croft', 'lcroft@sweep.com', '0048621455654'),
+(5, 94, 1, '2017-12-12', 0, 'Jimmy', 'Raynor', 'jamesraynor@sc.com', NULL),
+(7, 60, 1, '2018-02-20', 0, 'Jimmy', 'McGill', 'jm@mcgill.com', NULL),
+(8, 23, 4, '2018-01-31', 0, 'Xander', 'Cage', 'xan@email.org', '0791236598');
 
 
 --

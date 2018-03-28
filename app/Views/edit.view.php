@@ -3,7 +3,7 @@
         <div class="col-2"></div>
         <div class="col-8">
             <h3>Ausleihe bearbeiten</h3>
-            <form method="POST">
+            <form id="edit-form" method="POST">
             <div class="row">
                 <div class="col-6">
                     <label id="surnamelabel">Nachname</label>
@@ -51,7 +51,7 @@
                 <div class="col-6">
                 <select class="selectvideo mb-3" name="movieid">
                     <?php foreach ($movies as $movie) { ?>
-                        <option value="<?php echo $movie["id"];?>"
+                        <option id="movieid" value="<?php echo $movie["id"];?>"
                         <?php if($movie["id"] == $currentrental['fk_ID']) {
                             echo "selected"; } ?> > <?php echo e($movie["title"]); ?> </option>
                      <?php   
