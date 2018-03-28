@@ -8,13 +8,13 @@ $ren = new Rental();
 $movies = $mov->getAllMovies();
 
 $id = $_GET['id'] ?? '';
+$ren->id = $id;
 
 $currentrental = $ren->getRentalById($id);
 $currentrental = $currentrental[0];
 
 $timerented = formatDate($currentrental['time_rented']);
 $timereturn = formatDate($currentrental['time_return']);
-
 
 
 if(post('firstname')){

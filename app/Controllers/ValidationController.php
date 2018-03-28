@@ -1,6 +1,15 @@
 <?php
 $isValid = true;
 
+$firstname = post('firstname') ?? ''; 
+$surname = post('surname') ?? ''; 
+$email = post('email') ?? '';
+$phone = post('phone') ?? ''; 
+$membershipkey = post('membershipkey') ?? ''; 
+$title = post('title') ?? '';
+$savetype = post('savetype') ?? '';
+$returned = post('returned') ?? '';
+
 if($firstname){
     if(strlen($firstname) < 1 || strlen($firstname) > 50){
         $isValid = false;
@@ -50,15 +59,19 @@ if($title){
     $mov->id = $title;
 }
 
+if($returned == 0 || $returned == 1){
+    $ren->status = $returned;
+}
+
 if($isValid == 1){
     echo "<h3>Gültige Eingabe. Wird verarbeitet.</h3>";
     if($savetype == "add"){
         $ren->saveNewRental($mov, $mem);
     } else {
-        $ren->saveEditedRental($mov, $mem);
+        $ren->saveEditedRental($mov);
     }
     
-    headerToRoute("show");
+    //headerToRoute("show");
 } else {
     echo "ungültige Eingabe ";
 }

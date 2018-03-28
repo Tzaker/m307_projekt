@@ -4,7 +4,7 @@ class Rental {
 
     public $id;
     public $time;
-    public $status;
+    public $status = 0;
     public $firstname;
     public $surname;
     public $email;
@@ -46,14 +46,16 @@ class Rental {
         $statement->execute();
     }
 
-    public function saveEditedRental($movie, $membership){
+    public function saveEditedRental($mov){
         $statement = $this->db->prepare('UPDATE rentals SET name = :firstname, surname = :surname, email = :email, phone = :phone, status = :status, fk_ID = :title  WHERE RentalID = :id');
         $statement->bindParam(':firstname', $this->firstname);
         $statement->bindParam(':surname', $this->surname);
         $statement->bindParam(':email', $this->email);
         $statement->bindParam(':phone', $this->phone);
-        $statement->bindParam(':id', $this->id);
+        $statement->bindParam(':status', $this->status);
         $statement->bindParam(':title', $mov->id);
+        $statement->bindParam(':id', $this->id);
+        $statement->execute();
     }
     
 }

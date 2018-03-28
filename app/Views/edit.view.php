@@ -41,12 +41,12 @@
                     <label id="membershipkeylabel">Zurückgebracht</label>
                 </div>
                 <div class="col-6">
-                <label id="titlelabel">Auswewähltes Video</label>
+                <label id="titlelabel">Ausgewähltes Video</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                <input type="checkbox" value="<?= $currentrental['status']; ?>">
+                <input type="checkbox" name="returned" value="1">
                 </div>
                 <div class="col-6">
                 <select class="mb-3">
