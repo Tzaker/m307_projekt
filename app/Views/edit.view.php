@@ -61,7 +61,7 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <label id="membershipnamelabel">Mitgliedschaft</label>
+                    <label id="membershipnamelabel">Mitgliedschaft (Tage)</label>
                 </div>
                 <div class="col-6">
                 <label id="daterentedlabel">Ausleihdatum</label>
@@ -69,10 +69,26 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="membershipname" name="membershipname" disabled value="<?= $currentrental['m_name']; ?>"/>
+                    <input class="mb-3" type="text" id="membershipname" name="membershipname" disabled value="<?php echo $currentrental['m_name']; ?>"/>
                 </div>
                 <div class="col-6">
                     <input class="mb-3" type="text" id="phone" name="phone" disabled value="<?= $timerented ?>"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label id="dayslabel">Maximale Ausleihedauer</label>
+                </div>
+                <div class="col-6">
+                <label id="returndatelabel">Rückgabedatum</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="mb-3" type="text" id="days" name="days" disabled value="<?php echo $currentrental['days']." Tage"; ?>"/>
+                </div>
+                <div class="col-6">
+                    <input class="mb-3" type="text" id="returndate" name="returndate" disabled value="<?= $timereturn ?>"/>
                 </div>
             </div>
             <br>
