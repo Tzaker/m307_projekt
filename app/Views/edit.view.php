@@ -4,6 +4,15 @@
         <div class="col-8">
             <h3>Ausleihe bearbeiten</h3>
             <form id="edit-form" method="POST">
+            <span class="error-msg">
+            <?php
+                if (isset($errors)) {
+                    foreach ($errors as $error) {
+                        echo $error?><br/><?php
+                    }
+                }
+            ?>
+            </span>
             <div class="row">
                 <div class="col-6">
                     <label id="surnamelabel">Nachname</label>
