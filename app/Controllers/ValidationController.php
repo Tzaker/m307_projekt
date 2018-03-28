@@ -66,7 +66,7 @@ if($returned == 0 || $returned == 1){
 }
 
 if(count($errors) == 0){
-    echo "<h3>Gültige Eingabe. Wird verarbeitet.</h3>";
+    //echo "<h3>Gültige Eingabe. Wird verarbeitet.</h3>";
     if($savetype == "add"){
         $ren->saveNewRental($mov, $mem);
     } else {
@@ -74,9 +74,9 @@ if(count($errors) == 0){
     }
     
     //headerToRoute("show");
-} else {
+} /*else {
     foreach ($errors as $error) {
         echo $error . '<br/>';
     }
     echo "ungültige Eingabe ";
-}
+}*/
