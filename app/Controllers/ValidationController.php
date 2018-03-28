@@ -73,7 +73,7 @@ if(count($errors) == 0){
         $ren->saveEditedRental($mov);
     }
     
-    //headerToRoute("show");
+    headerToRoute("show");
 } /*else {
     foreach ($errors as $error) {
         echo $error . '<br/>';

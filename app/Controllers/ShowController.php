@@ -17,4 +17,11 @@ foreach ($rentals as &$row) {
 
 }
 
+if(post('returnids')){
+    $idarray = post('returnids');
+    $rental->setReturned($idarray);
+    headerToRoute("show");
+}
+
 require 'app/Views/show.view.php';
+

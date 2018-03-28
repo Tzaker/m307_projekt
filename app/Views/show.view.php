@@ -3,6 +3,7 @@
         <div class="col-2"></div>
         <div class="col-8">
             <h3>Ausleihen anzeigen</h3>
+            <form id="show-form" method="POST">
             <table class="table">
                 <thead>
                     <tr>
@@ -10,7 +11,8 @@
                     <th scope="col">Vorname</th>
                     <th scope="col">Film</th>
                     <th scope="col">Rückgabedatum</th>
-                    <th scope="col"></th>
+                    <th scope="col">Frist</th>
+                    <th scope="col">Zurückgebracht</th>
                     <th scope="col"></th>
                     </tr>
                 </thead>
@@ -22,11 +24,14 @@
                     <td><?= e($rental["title"]) ?></td>
                     <td><?= e($rental["time_return"]) ?></td>
                     <td><?= e($rental["smile"]) ?></td>
+                    <td><input name="returnids[]" type="checkbox" value="<?= $rental["RentalID"]?>"></input></td>
                     <td><a href="edit?id=<?= $rental["RentalID"]?>">Bearbeiten</a></td>
                     <tr/>
                 <?php } ?>
                 </tbody>
             </table>
+            <input class="btn-dark" type="submit" value="Ausgewählte Einträge als zurückgebracht markieren"></input>
+            </form>
         </div>
         <div class="col-2"></div>
 
