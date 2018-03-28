@@ -41,22 +41,24 @@ $(function() {
             }
 
             //check for correct phone number input
-            var $phonevalue = $('#phone');
-            var $phone = $('#phonelabel');
-            var reg = "[^\+\/\(\)\-\d\s]";
-
-            if($phonevalue.val().match(reg)){
-                isValid = false;
-                console.log("invalid phone");
-                // Eine Fehlermeldung generieren
-                var error = '<span class="error-msg">'
-                                + "Telefonnummer ungültig"
-                                + '</span>';
-
-                $phone.append( ' ' + error);
-            }
+           
 
         });
+
+        var $phonevalue = $('#phone');
+        var $phone = $('#phonelabel');
+        var reg = "[^\+\/\(\)\-\d\s]";
+
+        if($phonevalue.val().match(reg)){
+            isValid = false;
+            console.log("invalid phone");
+            // Eine Fehlermeldung generieren
+            var error = '<span class="error-msg">'
+                            + "Telefonnummer ungültig"
+                            + '</span>';
+
+            $phone.append( ' ' + error);
+        }
 
         return isValid;
 

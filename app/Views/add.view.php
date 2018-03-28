@@ -23,10 +23,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="surname" name="surname"/>
+                    <input class="mb-3" type="text" id="surname" name="surname" value="<?= @$surname ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="firstname" name="firstname"/>
+                    <input class="mb-3" type="text" id="firstname" name="firstname" value="<?= @$firstname ?>"/>
                 </div>
             </div>
             <div class="row">
@@ -39,10 +39,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="email" id="email" name="email"/>
+                    <input class="mb-3" type="email" id="email" name="email" value="<?= @$email ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="phone" name="phone"/>
+                    <input class="mb-3" type="text" id="phone" name="phone" value="<?= @$phone ?>"/>
                 </div>
             </div>
             <div class="row">

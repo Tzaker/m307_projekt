@@ -42,7 +42,7 @@
                     <input class="mb-3" type="email" id="email" name="email" value="<?= e($currentrental['email']); ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="phone" name="phone" value="<?= e($currentrental['phone']); ?>"/>
+                    <input class="mb-3" type="text" id="phone" name="phone" value="<?= $currentrental['phone']; ?>"/>
                 </div>
             </div>
             <div class="row">

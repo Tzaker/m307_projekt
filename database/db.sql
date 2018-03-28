@@ -5,31 +5,42 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-CREATE DATABASE `kurseictbz_30716` IF NOT EXISTS;
+CREATE DATABASE IF NOT EXISTS `kurseictbz_30716` ;
 USE `kurseictbz_30716`;
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `membership`
+-- Tabellenstruktur für Tabelle `rentals`
 --
 
-DROP TABLE IF EXISTS `membership`;
-CREATE TABLE `membership` (
-  `MembershipID` int(11) NOT NULL,
-  `m_name` varchar(50) NOT NULL,
-  `days` int(11) NOT NULL
+DROP TABLE IF EXISTS `rentals`;
+CREATE TABLE `rentals` (
+  `RentalID` int(11) NOT NULL,
+  `fk_ID` int(11) NOT NULL,
+  `fk_MembershipID` int(11) NOT NULL,
+  `time_rented` date NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `surname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Daten für Tabelle `membership`
+-- Daten für Tabelle `rentals`
 --
 
-INSERT INTO `membership` (`MembershipID`, `m_name`, `days`) VALUES
-(1, 'Keine', 30),
-(2, 'Bronze', 40),
-(3, 'Silber', 50),
-(4, 'Gold', 70);
+INSERT INTO `rentals` (`RentalID`, `fk_ID`, `fk_MembershipID`, `time_rented`, `status`, `name`, `surname`, `email`, `phone`) VALUES
+(1, 56, 2, '2018-03-13', 0, 'George', 'Harrison', 'geha@internet.com', '+41798575223'),
+(2, 85, 4, '2018-02-20', 0, 'Johnny', 'B. Goode', 'johnny@terz.com', '0784562114'),
+(3, 12, 1, '2018-01-09', 0, 'Bert', 'Brecht', 'berti@brecht.de', NULL),
+(4, 39, 3, '2018-03-04', 1, 'Lara', 'Croft', 'lcroft@sweep.com', '0048621455654'),
+(5, 94, 1, '2017-12-12', 0, 'Jimmy', 'Raynor', 'jamesraynor@sc.com', NULL),
+(7, 60, 1, '2018-02-20', 0, 'Jimmy', 'McGill', 'jm@mcgill.com', NULL),
+(8, 23, 4, '2018-01-31', 0, 'Xander', 'Cage', 'xan@email.org', '0791236598');
+
+
 
 -- --------------------------------------------------------
 
@@ -152,35 +163,27 @@ INSERT INTO `movies` (`id`, `title`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `rentals`
+-- Tabellenstruktur für Tabelle `membership`
 --
 
-DROP TABLE IF EXISTS `rentals`;
-CREATE TABLE `rentals` (
-  `RentalID` int(11) NOT NULL,
-  `fk_ID` int(11) NOT NULL,
-  `fk_MembershipID` int(11) NOT NULL,
-  `time_rented` date NOT NULL,
-  `status` tinyint(1) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `surname` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `phone` varchar(15) DEFAULT NULL
+DROP TABLE IF EXISTS `membership`;
+CREATE TABLE `membership` (
+  `MembershipID` int(11) NOT NULL,
+  `m_name` varchar(50) NOT NULL,
+  `days` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Daten für Tabelle `rentals`
+-- Daten für Tabelle `membership`
 --
 
-INSERT INTO `rentals` (`RentalID`, `fk_ID`, `fk_MembershipID`, `time_rented`, `status`, `name`, `surname`, `email`, `phone`) VALUES
-(1, 56, 2, '2018-03-13', 0, 'George', 'Harrison', 'geha@internet.com', '+41798575223'),
-(2, 85, 4, '2018-02-20', 0, 'Johnny', 'B. Goode', 'johnny@terz.com', '0784562114'),
-(3, 12, 1, '2018-01-09', 0, 'Bert', 'Brecht', 'berti@brecht.de', NULL),
-(4, 39, 3, '2018-03-04', 1, 'Lara', 'Croft', 'lcroft@sweep.com', '0048621455654'),
-(5, 94, 1, '2017-12-12', 0, 'Jimmy', 'Raynor', 'jamesraynor@sc.com', NULL),
-(7, 60, 1, '2018-02-20', 0, 'Jimmy', 'McGill', 'jm@mcgill.com', NULL),
-(8, 23, 4, '2018-01-31', 0, 'Xander', 'Cage', 'xan@email.org', '0791236598');
+INSERT INTO `membership` (`MembershipID`, `m_name`, `days`) VALUES
+(1, 'Keine', 30),
+(2, 'Bronze', 40),
+(3, 'Silber', 50),
+(4, 'Gold', 70);
 
+-- --------------------------------------------------------
 
 --
 -- Indizes der exportierten Tabellen
