@@ -14,10 +14,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="surname" name="surname" value="<?= $currentrental['surname']; ?>"/>
+                    <input class="mb-3" type="text" id="surname" name="surname" value="<?= e($currentrental['surname']); ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="firstname" name="firstname" value="<?= $currentrental['name']; ?>"/>
+                    <input class="mb-3" type="text" id="firstname" name="firstname" value="<?= e($currentrental['name']); ?>"/>
                 </div>
             </div>
             <div class="row">
@@ -30,10 +30,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="email" id="email" name="email" value="<?= $currentrental['email']; ?>"/>
+                    <input class="mb-3" type="email" id="email" name="email" value="<?= e($currentrental['email']); ?>"/>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="phone" name="phone" value="<?= $currentrental['phone']; ?>"/>
+                    <input class="mb-3" type="text" id="phone" name="phone" value="<?= e($currentrental['phone']); ?>"/>
                 </div>
             </div>
             <div class="row">
@@ -53,7 +53,7 @@
                     <?php foreach ($movies as $movie) { ?>
                         <option value="<?php echo $movie["id"];?>"
                         <?php if($movie["id"] == $currentrental['fk_ID']) {
-                            echo "selected"; } ?> > <?php echo $movie["title"]; ?> </option>
+                            echo "selected"; } ?> > <?php echo e($movie["title"]); ?> </option>
                      <?php   
                     } ?>
                 </select>
@@ -69,7 +69,7 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input class="mb-3" type="text" id="membershipname" name="membershipname" disabled value="<?php echo $currentrental['m_name']; ?>"/>
+                    <input class="mb-3" type="text" id="membershipname" name="membershipname" disabled value="<?php echo e($currentrental['m_name']); ?>"/>
                 </div>
                 <div class="col-6">
                     <input class="mb-3" type="text" id="phone" name="phone" disabled value="<?= $timerented ?>"/>

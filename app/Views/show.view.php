@@ -17,11 +17,11 @@
                 <tbody>
                 <?php foreach ($rentals as $rental) { ?>
                     <tr>
-                    <td><?= $rental["surname"] ?></td>
-                    <td><?= $rental["name"] ?></td>
-                    <td><?= $rental["title"] ?></td>
-                    <td><?= $rental["time_return"] ?></td>
-                    <td><?= $rental["smile"] ?></td>
+                    <td><?= e($rental["surname"]) ?></td>
+                    <td><?= e($rental["name"]) ?></td>
+                    <td><?= e($rental["title"]) ?></td>
+                    <td><?= e($rental["time_return"]) ?></td>
+                    <td><?= e($rental["smile"]) ?></td>
                     <td><a href="edit?id=<?= $rental["RentalID"]?>">Bearbeiten</a></td>
                     <tr/>
                 <?php } ?>
