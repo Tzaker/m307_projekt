@@ -57,5 +57,13 @@ class Rental {
         $statement->bindParam(':id', $this->id);
         $statement->execute();
     }
+
+    public function setReturned($arr){
+        foreach($arr as $id){
+            $statement = $this->db->prepare('UPDATE rentals SET status = 1 WHERE RentalID = :id');
+            $statement->bindParam(':id', $id);
+            $statement->execute();
+        }
+    }
     
 }
