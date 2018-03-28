@@ -57,8 +57,8 @@ if($isValid == 1){
     } else {
         $ren->saveEditedRental($mov, $mem);
     }
-
-    //header("http://localhost/projekt/m307_projekt/show");
+    
+    headerToRoute("show");
 } else {
     echo "ungültige Eingabe ";
 }

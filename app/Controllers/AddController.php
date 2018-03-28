@@ -18,8 +18,9 @@ $membershipkey = post('membershipkey') ?? '';
 $title = post('title') ?? '';
 $savetype = post('savetype') ?? '';
 
-require 'app/Views/add.view.php';
-
 if(post('firstname')){
     require 'app/Controllers/ValidationController.php';
 }
+
+require 'app/Views/add.view.php';
+
