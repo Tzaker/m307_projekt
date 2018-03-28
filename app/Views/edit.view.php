@@ -38,10 +38,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <p>Zurückgebracht</p>
+                    <label id="membershipkeylabel">Zurückgebracht</label>
                 </div>
                 <div class="col-6">
-                    <p>Ausgewähltes Video</p>
+                <label id="titlelabel">Auswewähltes Video</label>
                 </div>
             </div>
             <div class="row">
@@ -49,7 +49,7 @@
                 <input type="checkbox" value="<?= $currentrental['status']; ?>">
                 </div>
                 <div class="col-6">
-                <select>
+                <select class="mb-3">
                     <?php foreach ($movies as $movie) { ?>
                         <option value="<?php echo $movie["id"];?>"
                         <?php if($movie["id"] == $currentrental['fk_ID']) {
@@ -57,6 +57,22 @@
                      <?php   
                     } ?>
                 </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label id="membershipnamelabel">Mitgliedschaft</label>
+                </div>
+                <div class="col-6">
+                <label id="daterentedlabel">Ausleihdatum</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input class="mb-3" type="text" id="membershipname" name="membershipname" disabled value="<?= $currentrental['m_name']; ?>"/>
+                </div>
+                <div class="col-6">
+                    <input class="mb-3" type="text" id="phone" name="phone" disabled value="<?= $currentrental['time_rented']; ?>"/>
                 </div>
             </div>
             <br>
