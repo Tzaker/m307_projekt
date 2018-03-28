@@ -29,7 +29,7 @@ class Rental {
     }
 
     public function getRentalById($id){
-        $statement = $this->db->prepare('SELECT * FROM rentals WHERE RentalID = :id');
+        $statement = $this->db->prepare('SELECT RentalID, fk_ID, fk_MembershipID, time_rented, status, name, surname, email, phone, m_name, days FROM rentals INNER JOIN membership ON MembershipID = fk_MembershipID WHERE RentalID = :id');
         $statement->bindParam(':id', $id);
         $statement->execute();
         return $statement->fetchAll();
