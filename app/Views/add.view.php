@@ -73,7 +73,7 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <label id="dayslabel">Maximale Ausleihedauer</label>
+                    <label id="dayslabel">Rückgabedatum</label>
                 </div>
             </div>
             <div class="row">

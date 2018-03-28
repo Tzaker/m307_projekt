@@ -14,7 +14,7 @@ function updateDateReturn() {
 
     $.each(memberships, function(membershipkey, membership) {
         if (membership["MembershipID"] == selectedID) {
-            days = membership["days"];
+            days = parseInt(membership["days"]) + 30;
         }
     });
 
