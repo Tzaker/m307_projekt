@@ -24,3 +24,9 @@ function post(string $key, $default = '')
 {
     return $_POST[$key] ?? $default;
 }
+
+function formatDate($datestring){
+    $date = new DateTime($datestring);
+    $date = $date->format('d.m.Y');
+    return $date;
+}

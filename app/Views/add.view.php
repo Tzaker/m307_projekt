@@ -6,7 +6,7 @@
             <form id="add-form" method="POST">
             <div class="row">
                 <div class="col-6">
-                    <label id="surnamelabel">Name</label>
+                    <label id="surnamelabel">Nachname</label>
                 </div>
                 <div class="col-6">
                     <label id="firstnamelabel">Vorname</label>
