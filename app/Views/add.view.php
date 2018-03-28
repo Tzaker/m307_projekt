@@ -73,7 +73,7 @@
             <p>* obligatorisch</p>
             <br>
             <input type="hidden" value="add" name="savetype"/>
-            <input class="btn" type="submit" value="Speichern">
+            <input class="btn-dark" type="submit" value="Speichern">
             </form>
         </div>
         <div class="col-2"></div>

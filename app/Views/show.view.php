@@ -30,7 +30,7 @@
                 <?php } ?>
                 </tbody>
             </table>
-            <input class="btn" type="submit" value="Ausgewählte Einträge als zurückgebracht markieren"></input>
+            <input class="btn-dark" type="submit" value="Ausgewählte Einträge als zurückgebracht markieren"></input>
             </form>
         </div>
         <div class="col-2"></div>

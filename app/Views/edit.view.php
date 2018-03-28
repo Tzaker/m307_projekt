@@ -101,7 +101,7 @@
                 </div>
             </div>
             <br>
-            <input class="btn" type="submit" value="Speichern">
+            <input class="btn-dark" type="submit" value="Speichern">
             </form>
         </div>
         <div class="col-2"></div>
